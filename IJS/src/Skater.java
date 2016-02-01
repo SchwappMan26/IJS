@@ -2,22 +2,39 @@ import java.util.Scanner;
 public class Skater
 	{
 		static Scanner userInput = new Scanner(System.in);
-		static String name;
+		static int level;
+		static int numSkaters;
+		static String names;
 		static int element;
 		static int rotation; 
 		static int jump;
 		static int spin;
 		static int StepSequence;
 			{
+				AskSkaterLevel();
 				AskSkaterName();
 				AskForElements();
 			}
+			public static void AskSkaterLevel()
+				{
+					System.out.println("What Level are you skating at?");
+					System.out.println("     (1)Intermediate");
+					System.out.println("     (2)Novice");
+					System.out.println("     (3)Junior");
+					System.out.println("     (4)Senior");
+					level = userInput.nextInt();
+				}
+			public static void AskForHowManySkaters()
+				{
+					System.out.println("How many Skaters are competing?");
+					numSkaters = userInput.nextInt();
+				}
 			public static void AskSkaterName()
 				{
 					System.out.println("Dear Skater, what is your name?");
-					name = userInput.nextLine();
+					names = userInput.nextLine();
 					System.out.println(" ");
-					System.out.println("Introducing from Denver Colorado " + name);
+					System.out.println("Representing Mullen High School in Denver, Colorado " + names);
 					System.out.println("Good luck!");
 					System.out.println(" ");
 					System.out.println("You are allowed 8 jumps, 3 spins, and 2 Step Sequences");

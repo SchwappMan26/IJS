@@ -5,6 +5,9 @@ public class Routine
 		static ArrayList<Routine>yourRoutine=new ArrayList<Routine>();
 		private String element;
 		private double value;
+		private double minusThree;
+		private double minusTwo;
+		
 		public Routine(String e, double v)
 			{
 				element=e;

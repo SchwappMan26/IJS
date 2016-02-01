@@ -38,7 +38,7 @@ public class Runner
 							{
 								System.out.println(" ");
 								Routine.finalPrintList();
-								System.out.println(Skater.name+ " is currently in 1st Place");
+								System.out.println(Skater.names+ " is currently in 1st Place");
 								skateContinues=false;
 							}
 					}	
