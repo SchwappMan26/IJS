@@ -7,66 +7,78 @@ public class Routine
 		private double value;
 		private double minusThree;
 		private double minusTwo;
+		private double minusOne;
+		private double plusOne;
+		private double plusTwo;
+		private double plusThree;
 		
-		public Routine(String e, double v)
+		public Routine(String e, double m3, double m2, double m1, double v, double p1, double p2, double p3)
 			{
 				element=e;
+				minusThree=m3;
+				minusTwo=m2;
+				minusOne=m1;
 				value=v;
+				plusOne=p1;
+				plusTwo=p2;
+				plusThree=p3;
+				
 			}
 		public static void YourRoutine()
 			{			
 				if (Skater.rotation==1)
 					{
+						
 						if(Skater.jump==1)
 							{
-								yourRoutine.add(new Routine ("1Axel",1.1));
+								yourRoutine.add(new Routine("1Toe Loop", 0.1, 0.2, 0.3, 0.4, 0.6, 0.8, 1.0));
 							}
 						else if(Skater.jump==2)
 							{
-								yourRoutine.add(new Routine("1Toe Loop",0.4));
+								yourRoutine.add(new Routine("1Salchow", 0.1, 0.2, 0.3, 0.4, 0.6, 0.8, 1.0));
 							}
 						else if(Skater.jump==3)
 							{
-								yourRoutine.add(new Routine("1Salchow",0.4));
+								yourRoutine.add(new Routine("1Loop", 0.2, 0.3, 0.4, 0.5, 0.7, 0.9, 1.1));
 							}
 						else if(Skater.jump==4)
 							{
-								yourRoutine.add(new Routine("1Loop",0.5));
+								yourRoutine.add(new Routine("1Flip", 0.2, 0.3, 0.4, 0.5, 0.7, 0.9, 1.1));
 							}
 						else if(Skater.jump==5)
 							{
-								yourRoutine.add(new Routine("1Flip",0.5));
+								yourRoutine.add(new Routine("1Lutz", 0.3, 0.4, 0.5, 0.6, 0.8, 1.0, 1.2));
 							}
 						else if(Skater.jump==6)
 							{
-								yourRoutine.add(new Routine("1Lutz",0.6));
+								yourRoutine.add(new Routine ("1Axel", 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7));
 							}
 					}
 				else if(Skater.rotation==2)
 					{
 						if(Skater.jump==1)
 							{
-								yourRoutine.add(new Routine ("2Axel",3.3));
+								yourRoutine.add(new Routine("2Toe Loop", 0.7, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9));
 							}
 						else if(Skater.jump==2)
 							{
-								yourRoutine.add(new Routine("2Toe Loop",1.3));
+								yourRoutine.add(new Routine("2Salchow", 0.7, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9));
 							}
 						else if(Skater.jump==3)
 							{
-								yourRoutine.add(new Routine("2Salchow",1.3));
+								yourRoutine.add(new Routine("2Loop",1.8));
 							}
 						else if(Skater.jump==4)
 							{
-								yourRoutine.add(new Routine("2Loop",1.8));
+								yourRoutine.add(new Routine("2Flip",1.9));
 							}
 						else if(Skater.jump==5)
 							{
-								yourRoutine.add(new Routine("2Flip",1.9));
+								yourRoutine.add(new Routine("2Lutz",2.1));
 							}
 						else if(Skater.jump==6)
 							{
-								yourRoutine.add(new Routine("2Lutz",2.1));
+								yourRoutine.add(new Routine ("2Axel",3.3));
 							}
 					}
 				else if(Skater.rotation==3)
