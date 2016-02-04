@@ -66,46 +66,47 @@ public class Routine
 							}
 						else if(Skater.jump==3)
 							{
-								yourRoutine.add(new Routine("2Loop",1.8));
+								yourRoutine.add(new Routine("2Loop", 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7));
 							}
 						else if(Skater.jump==4)
 							{
-								yourRoutine.add(new Routine("2Flip",1.9));
+								yourRoutine.add(new Routine("2Flip", 1.0, 1.3, 1.6, 1.9, 2.2, 2.5, 2.8));
 							}
 						else if(Skater.jump==5)
 							{
-								yourRoutine.add(new Routine("2Lutz",2.1));
+								yourRoutine.add(new Routine("2Lutz", 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3.0));
 							}
 						else if(Skater.jump==6)
 							{
-								yourRoutine.add(new Routine ("2Axel",3.3));
+								yourRoutine.add(new Routine ("2Axel", 1.8, 2.3, 2.8, 3.3, 3.8, 4.3, 4.8));
 							}
 					}
 				else if(Skater.rotation==3)
 					{
+						
 						if(Skater.jump==1)
 							{
-								yourRoutine.add(new Routine ("3Axel",8.5));
+								yourRoutine.add(new Routine("3Toe Loop", 2.2, 2.9, 3.6, 4.3, 5.0, 5.7, 6.4));
 							}
 						else if(Skater.jump==2)
 							{
-								yourRoutine.add(new Routine("3Toe Loop",4.3));
+								yourRoutine.add(new Routine("3Salchow", 2.3, 3.0, 3.7, 4.4, 5.1, 5.8, 6.5));
 							}
 						else if(Skater.jump==3)
 							{
-								yourRoutine.add(new Routine("3Salchow",4.4));
+								yourRoutine.add(new Routine("3Loop",5.1));
 							}
 						else if(Skater.jump==4)
 							{
-								yourRoutine.add(new Routine("3Loop",5.1));
+								yourRoutine.add(new Routine("3Flip",5.3));
 							}
 						else if(Skater.jump==5)
 							{
-								yourRoutine.add(new Routine("3Flip",5.3));
+								yourRoutine.add(new Routine("3Lutz",6.0));
 							}
 						else if(Skater.jump==6)
 							{
-								yourRoutine.add(new Routine("3Lutz",6.0));
+								yourRoutine.add(new Routine ("3Axel",8.5));
 							}
 					}
 				else if(Skater.rotation==4)
