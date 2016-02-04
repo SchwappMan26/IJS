@@ -41,6 +41,7 @@ public class Skater
 				}
 			public static int AskForElements()
 				{
+					
 					System.out.println("What are your elements?");
 					System.out.println("You are allowed 8 jumps, 3 spins, and 2 Step Sequences");
 					System.out.println(" ");
@@ -50,8 +51,8 @@ public class Skater
 						{
 							System.out.println("(1) Single, (2) Double, (3) Triple, (4) Quad");
 							rotation=userInput.nextInt();
-							System.out.println("(1)Axel, (2)Toe Loop, (3)Salchow, (4)Loop, (5)Flip, (6)Lutz, (7)Single Single Combintation, (8)");
-							jump = userInput.nextInt();	
+							System.out.println("(1)Axel, (2)Toe Loop, (3)Salchow, (4)Loop, (5)Flip, (6)Lutz, (7)Combination");
+							jump = userInput.nextInt();
 							return jump;
 						}
 					else if (element==2)

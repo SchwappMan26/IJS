@@ -94,46 +94,47 @@ public class Routine
 							}
 						else if(Skater.jump==3)
 							{
-								yourRoutine.add(new Routine("3Loop",5.1));
+								yourRoutine.add(new Routine("3Loop",3.0, 3.7, 4.4, 5.1, 5.8, 6.5, 7.2));
 							}
 						else if(Skater.jump==4)
 							{
-								yourRoutine.add(new Routine("3Flip",5.3));
+								yourRoutine.add(new Routine("3Flip", 3.2, 3.9, 4.6, 5.3, 6.0, 6.7, 7.4));
 							}
 						else if(Skater.jump==5)
 							{
-								yourRoutine.add(new Routine("3Lutz",6.0));
+								yourRoutine.add(new Routine("3Lutz", 3.9, 4.6, 5.3, 6.0, 6.7, 7.4, 8.1));
 							}
 						else if(Skater.jump==6)
 							{
-								yourRoutine.add(new Routine ("3Axel",8.5));
+								yourRoutine.add(new Routine ("3Axel", 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5));
 							}
 					}
 				else if(Skater.rotation==4)
 					{
+						
 						if(Skater.jump==1)
 							{
-								yourRoutine.add(new Routine ("4Axel",15.0));
+								yourRoutine.add(new Routine("4Toe Loop", 6.3, 7.9, 9.1, 10.3, 11.3, 12.3, 13.3));
 							}
 						else if(Skater.jump==2)
 							{
-								yourRoutine.add(new Routine("4Toe Loop",10.3));
+								yourRoutine.add(new Routine("4Salchow", 6.5, 8.1, 9.3, 10.5, 11.5, 12.5, 13.5));
 							}
 						else if(Skater.jump==3)
 							{
-								yourRoutine.add(new Routine("4Salchow",10.5));
+								yourRoutine.add(new Routine("4Loop", 8.0, 9.6, 10.8, 12.0, 13.0, 14.0, 15.0));
 							}
 						else if(Skater.jump==4)
 							{
-								yourRoutine.add(new Routine("4Loop",12.0));
+								yourRoutine.add(new Routine("4Flip", 8.3, 9.9, 11.1, 12.3, 13.3, 14.3, 15.3));
 							}
 						else if(Skater.jump==5)
 							{
-								yourRoutine.add(new Routine("4Flip",12.3));
+								yourRoutine.add(new Routine("4Lutz", 9.6, 11.2, 12.4, 13.6, 14.6, 15.6, 16.6));
 							}
 						else if(Skater.jump==6)
 							{
-								yourRoutine.add(new Routine("4Lutz",13.6));
+								yourRoutine.add(new Routine ("4Axel", 11.0, 12.6, 13.8, 15.0, 16.2, 17.4, 18.6));
 							}
 					}
 				else if (Skater.spin==1)
@@ -182,7 +183,23 @@ public class Routine
 							sum=sum+yourRoutine.get(i).getValue();
 						}
 					System.out.println("Your Total technical score is: "+sum);
-				}	
+				}
+			public static double getSum()
+				{
+					return sum;
+				}
+			public static void setSum(double sum)
+				{
+					Routine.sum = sum;
+				}
+			public static ArrayList<Routine> getYourRoutine()
+				{
+					return yourRoutine;
+				}
+			public static void setYourRoutine(ArrayList<Routine> yourRoutine)
+				{
+					Routine.yourRoutine = yourRoutine;
+				}
 			public String getElement()
 				{
 					return element;
@@ -199,4 +216,54 @@ public class Routine
 				{
 					this.value = value;
 				}
+			public double getMinusThree()
+				{
+					return minusThree;
+				}
+			public void setMinusThree(double minusThree)
+				{
+					this.minusThree = minusThree;
+				}
+			public double getMinusTwo()
+				{
+					return minusTwo;
+				}
+			public void setMinusTwo(double minusTwo)
+				{
+					this.minusTwo = minusTwo;
+				}
+			public double getMinusOne()
+				{
+					return minusOne;
+				}
+			public void setMinusOne(double minusOne)
+				{
+					this.minusOne = minusOne;
+				}
+			public double getPlusOne()
+				{
+					return plusOne;
+				}
+			public void setPlusOne(double plusOne)
+				{
+					this.plusOne = plusOne;
+				}
+			public double getPlusTwo()
+				{
+					return plusTwo;
+				}
+			public void setPlusTwo(double plusTwo)
+				{
+					this.plusTwo = plusTwo;
+				}
+			public double getPlusThree()
+				{
+					return plusThree;
+				}
+			public void setPlusThree(double plusThree)
+				{
+					this.plusThree = plusThree;
+				}	
+			
+			
 }
