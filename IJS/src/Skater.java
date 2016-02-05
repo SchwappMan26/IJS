@@ -10,6 +10,10 @@ public class Skater
 		static int jump;
 		static int spin;
 		static int StepSequence;
+		static int elementNumber=0;
+		static int jumps=0;
+		static int spins=0;
+		static int stepSequence=0;
 			{
 				AskSkaterLevel();
 				AskSkaterName();
@@ -23,6 +27,38 @@ public class Skater
 					System.out.println("     (3)Junior");
 					System.out.println("     (4)Senior");
 					level = userInput.nextInt();
+					if (level==1)
+						{
+							elementNumber=9;
+							jumps=6;
+							spins=2;
+							stepSequence=1;
+							System.out.println("You are allowed 6 jumps, 2 spins, and 1 step sequence");
+						}
+					else if (level==2)
+						{
+							elementNumber=11;
+							jumps=7;
+							spins=3;
+							stepSequence=1;
+							System.out.println("You are allowed 7 jumps, 3 spins, and 1 step sequence");
+						}
+					else if (level==3)
+						{
+							elementNumber=12;
+							jumps=8;
+							spins=3;
+							stepSequence=1;
+							System.out.println("You are allowed 8 jumps, 3 spins, and 1 step sequence");
+						}
+					else
+						{
+							elementNumber=13;
+							jumps=8;
+							spins=3;
+							stepSequence=2;
+							System.out.println("You are allowed 8 jumps, 3 spins, and 2 Step Sequences");
+						}
 				}
 			public static void AskForHowManySkaters()
 				{
@@ -34,34 +70,37 @@ public class Skater
 					System.out.println("Dear Skater, what is your name?");
 					names = userInput.nextLine();
 					System.out.println(" ");
-					System.out.println("Representing Mullen High School in Denver, Colorado " + names);
+					System.out.println("Representing Mullen High School in Denver Colorado " + names);
 					System.out.println("Good luck!");
 					System.out.println(" ");
-					System.out.println("You are allowed 8 jumps, 3 spins, and 2 Step Sequences");
 				}
 			public static int AskForElements()
 				{
 					
 					System.out.println("What are your elements?");
-					System.out.println("You are allowed 8 jumps, 3 spins, and 2 Step Sequences");
+					System.out.println("You are allowed "+jumps+ " jumps, "+spins+" spins, and "+stepSequence+" Step Sequences");
 					System.out.println(" ");
-					System.out.println("(1)Jump, (2)Spin, or (3)step sequence?");
+					System.out.println("(1)Jump, (2)Jump Combination (3)Spin, or (4)step sequence?");
 					element = userInput.nextInt();
 					if (element==1)
 						{
 							System.out.println("(1) Single, (2) Double, (3) Triple, (4) Quad");
 							rotation=userInput.nextInt();
-							System.out.println("(1)Axel, (2)Toe Loop, (3)Salchow, (4)Loop, (5)Flip, (6)Lutz, (7)Combination");
+							System.out.println("(1)Toe Loop, (2)Salchow, (3)Loop, (4)Flip, (5)Lutz, (6)Axel");
 							jump = userInput.nextInt();
 							return jump;
 						}
-					else if (element==2)
+					else if(element==2)
+						{
+							
+						}
+					else if (element==3)
 						{
 							System.out.println("(1)Combo Spin, (2)Flying sit, (3)flying camel, (4)Change foot sit, (5)Change foot camel");
 							spin = userInput.nextInt();
 							return spin;
 						}
-					else if(element==3)
+					else if(element==4)
 						{
 							System.out.println("(1)Step Sequence, (2)choreograph step sequence");
 							StepSequence = userInput.nextInt();

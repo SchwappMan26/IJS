@@ -1,43 +1,39 @@
 public class Runner
 	{
-		static int jumps=0;
-		static int spins=0;
-		static int stepSequence=0;
-		static int elements=0;
+		
+		static int elements1=0;
 		public static boolean skateContinues=true;
 		public static void main(String[] args)
 			{			
 				Skater.AskSkaterName();
+				Skater.AskSkaterLevel();
 				while (skateContinues) 
 					{
 						System.out.println(" ");
 						Skater.AskForElements();
 						if (Skater.element==1)
 							{
-								jumps++;
+								Skater.jumps--;
 							}
 						else if (Skater.element==2)
 							{
-								spins++;
+								Skater.spins--;
 							}
 						else if (Skater.element==3)
 							{
-								stepSequence++;
+								Skater.stepSequence--;
 							}
-						Routine.YourRoutine();
+						Elements.YourRoutine(); 
 						System.out.println("Elements: ");
 						System.out.println(" ");
-						Routine.printList();
+						Elements.printList();
 						System.out.println(" ");
-						System.out.println("Number of Jumps Completed: "+jumps );
-						System.out.println("Number of Spins completed: "+spins );
-						System.out.println("Number of Step Sequences Completed: "+stepSequence);
-						elements++;
-						System.out.println("Number of total elements completed: "+elements);
-						if (elements==13)
+						elements1++;
+						System.out.println("Number of total elements completed: "+elements1);
+						if (elements1==Skater.elementNumber)
 							{
-								System.out.println(" ");
-								Routine.finalPrintList();
+								System.out.println();
+								Elements.finalPrintList();
 								System.out.println(Skater.names+ " is currently in 1st Place");
 								skateContinues=false;
 							}
