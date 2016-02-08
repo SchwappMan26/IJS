@@ -1,6 +1,5 @@
 public class Runner
-	{
-		
+	{	
 		static int elements1=0;
 		public static boolean skateContinues=true;
 		public static void main(String[] args)
@@ -23,7 +22,9 @@ public class Runner
 							{
 								Skater.stepSequence--;
 							}
-						Elements.YourRoutine(); 
+						Elements.YourJumps();
+						Elements.yourSpins();
+						Elements.yourStepSequence();
 						System.out.println("Elements: ");
 						System.out.println(" ");
 						Elements.printList();

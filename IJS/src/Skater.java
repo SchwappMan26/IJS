@@ -10,6 +10,7 @@ public class Skater
 		static int jump;
 		static int spin;
 		static int StepSequence;
+		static String goe;
 		static int elementNumber=0;
 		static int jumps=0;
 		static int spins=0;
@@ -88,6 +89,9 @@ public class Skater
 							rotation=userInput.nextInt();
 							System.out.println("(1)Toe Loop, (2)Salchow, (3)Loop, (4)Flip, (5)Lutz, (6)Axel");
 							jump = userInput.nextInt();
+							System.out.println("What is the Grade of Execution (GOE)?");
+							System.out.println("(-3), (-2), (-1), (0), (+1), (+2), (+3)");
+							goe = userInput.nextLine();
 							return jump;
 						}
 					else if(element==2)
@@ -98,12 +102,16 @@ public class Skater
 						{
 							System.out.println("(1)Combo Spin, (2)Flying sit, (3)flying camel, (4)Change foot sit, (5)Change foot camel");
 							spin = userInput.nextInt();
+							System.out.println("What is the Grade of Execution (GOE)?");
+							System.out.println("(-3), (-2), (-1), 0, (+1), (+2), (+3)");
 							return spin;
 						}
 					else if(element==4)
 						{
 							System.out.println("(1)Step Sequence, (2)choreograph step sequence");
 							StepSequence = userInput.nextInt();
+							System.out.println("What is the Grade of Execution (GOE)?");
+							System.out.println("(-3), (-2), (-1), 0, (+1), (+2), (+3)");
 							return StepSequence;
 						}
 					return element;

@@ -10,8 +10,7 @@ public class Elements
 		private double minusOne;
 		private double plusOne;
 		private double plusTwo;
-		private double plusThree;
-		
+		private double plusThree;		
 		public Elements(String e, double m3, double m2, double m1, double v, double p1, double p2, double p3)
 			{
 				element=e;
@@ -21,14 +20,12 @@ public class Elements
 				value=v;
 				plusOne=p1;
 				plusTwo=p2;
-				plusThree=p3;
-				
+				plusThree=p3;		
 			}
-		public static void YourRoutine()
+		public static void YourJumps()
 			{			
 				if (Skater.rotation==1)
-					{
-						
+					{	
 						if(Skater.jump==1)
 							{
 								yourRoutine.add(new Elements("1Toe Loop", 0.1, 0.2, 0.3, 0.4, 0.6, 0.8, 1.0));
@@ -83,7 +80,6 @@ public class Elements
 					}
 				else if(Skater.rotation==3)
 					{
-						
 						if(Skater.jump==1)
 							{
 								yourRoutine.add(new Elements("3Toe Loop", 2.2, 2.9, 3.6, 4.3, 5.0, 5.7, 6.4));
@@ -110,8 +106,7 @@ public class Elements
 							}
 					}
 				else if(Skater.rotation==4)
-					{
-						
+					{		
 						if(Skater.jump==1)
 							{
 								yourRoutine.add(new Elements("4Toe Loop", 6.3, 7.9, 9.1, 10.3, 11.3, 12.3, 13.3));
@@ -137,48 +132,84 @@ public class Elements
 								yourRoutine.add(new Elements ("4Axel", 11.0, 12.6, 13.8, 15.0, 16.2, 17.4, 18.6));
 							}
 					}
-				else if (Skater.spin==1)
+			}
+		public static void yourSpins()
+			{	
+				if (Skater.spin==1)
 					{
-						yourRoutine.add(new Elements ("Combination Spin", 0.0, 0.0, 0.0, 3.5, 0.0, 0.0, 0.0));
+						yourRoutine.add(new Elements ("Combination Spin", 2.6, 2.9, 3.2, 3.5, 4.0, 4.5, 5.0));
 					}
 				else if (Skater.spin==2)
 					{
-						yourRoutine.add(new Elements ("Flying Sit", 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0));
+						yourRoutine.add(new Elements ("Flying Sit", 2.1, 2.4, 2.7, 3.0, 3.5, 4.0, 4.5));
 					}
 				else if (Skater.spin==3)
 					{
-						yourRoutine.add(new Elements ("Flying Camel", 0.0, 0.0, 0.0, 3.2, 0.0, 0.0, 0.0));
+						yourRoutine.add(new Elements ("Flying Camel", 2.3, 2.6, 2.9, 3.2, 3.7, 4.2, 4.7));
 					}
 				else if (Skater.spin==4)
 					{
-						yourRoutine.add(new Elements ("Change foot Sit", 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0));
+						yourRoutine.add(new Elements ("Change foot Sit", 2.1, 2.4, 2.7, 3.0, 3.5, 4.0, 4.5));
 					}
 				else if (Skater.spin==5)
 					{
-						yourRoutine.add(new Elements ("Change foot Camel", 0.0, 0.0, 0.0, 3.2, 0.0, 0.0, 0.0));
+						yourRoutine.add(new Elements ("Change foot Camel", 2.3, 2.6, 2.9, 3.2, 3.7, 4.2, 4.7));
 					}
-				else if (Skater.StepSequence==1)
+			}
+		public static void yourStepSequence()
+			{
+				if (Skater.StepSequence==1)
 					{
-						yourRoutine.add(new Elements ("Step Sequence", 0.0, 0.0, 0.0, 3.9, 0.0, 0.0, 0.0));
+						yourRoutine.add(new Elements ("Step Sequence", 2.8, 2.5, 3.2, 3.9, 4.6, 5.3, 6.0));
 					}
 				else if (Skater.StepSequence==2)
 					{
-						yourRoutine.add(new Elements ("Cheorgraphy Step Sequence", 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0));
+						yourRoutine.add(new Elements ("Cheorgraphy Step Sequence", 0.5, 1.0, 1.5, 2.0, 2.7, 3.4, 4.1));
 					}	
 			}
 			public static void printList()
 				{
 					for (Elements e : yourRoutine)
 						{
-							System.out.println(e.getElement()+" "+e.getValue());					
+							if(Skater.goe=="-3"||Skater.goe==" -3"||Skater.goe=="-3 "||Skater.goe==" -3 ")
+								{
+									System.out.println(e.getElement()+" "+e.getValue()+" GOE: "+e.getMinusThree());
+									sum+=e.getMinusThree();
+								}
+							else if(Skater.goe=="-2"||Skater.goe==" -2"||Skater.goe=="-2 "||Skater.goe==" -2 ")
+								{
+									System.out.println(e.getElement()+" "+e.getValue()+" GOE: "+e.getMinusTwo());
+									sum+=e.getMinusTwo();
+								}
+							else if(Skater.goe=="-1"||Skater.goe==" -1"||Skater.goe=="-1 "||Skater.goe==" -1 ")
+								{
+									System.out.println(e.getElement()+" "+e.getValue()+" GOE: "+e.getMinusOne());
+									sum+=e.getMinusOne();
+								}
+							else if(Skater.goe=="0"||Skater.goe==" 0"||Skater.goe=="0 "||Skater.goe==" 0 ")
+								{
+									System.out.println(e.getElement()+" "+e.getValue()+" GOE: "+e.getValue());
+									sum+=e.getValue();
+								}
+							else if(Skater.goe=="+1"||Skater.goe==" +1"||Skater.goe=="+1 "||Skater.goe==" +1 ")
+								{
+									System.out.println(e.getElement()+" "+e.getValue()+" GOE: "+e.getPlusOne());
+									sum+=e.getPlusOne();
+								}
+							else if(Skater.goe=="+2"||Skater.goe==" +2"||Skater.goe=="+2 "||Skater.goe==" +2 ")
+								{
+									System.out.println(e.getElement()+" "+e.getValue()+" GOE: "+e.getPlusTwo());
+									sum+=e.getPlusOne();
+								}
+							else if(Skater.goe=="+3"||Skater.goe==" +3"||Skater.goe=="+3 "||Skater.goe==" +3 ")
+								{
+									System.out.println(e.getElement()+" "+e.getValue()+" GOE: "+e.getPlusThree());
+									sum+=e.getPlusThree();
+								}
 						}
 				}
 			public static void finalPrintList()
 				{				
-					for (int i=0; i<Skater.elementNumber;i++)
-						{
-							sum=sum+yourRoutine.get(i).getValue();
-						}
 					System.out.println("Your Total technical score is: "+sum);
 				}
 			public static double getSum()
@@ -260,7 +291,5 @@ public class Elements
 			public void setPlusThree(double plusThree)
 				{
 					this.plusThree = plusThree;
-				}	
-			
-			
+				}			
 }
