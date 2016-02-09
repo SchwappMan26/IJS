@@ -23,8 +23,8 @@ public class Runner
 								Skater.stepSequence--;
 							}
 						Elements.YourJumps();
-						Elements.yourSpins();
-						Elements.yourStepSequence();
+//						Elements.yourSpins();
+//						Elements.yourStepSequence();
 						System.out.println("Elements: ");
 						System.out.println(" ");
 						Elements.printList();
