@@ -77,7 +77,7 @@ public class Skater
 				}
 			public static int AskForElements()
 				{
-					
+					Scanner userInput1=new Scanner(System.in);
 					System.out.println("What are your elements?");
 					System.out.println("You are allowed "+jumps+ " jumps, "+spins+" spins, and "+stepSequence+" Step Sequences");
 					System.out.println(" ");
@@ -92,10 +92,7 @@ public class Skater
 							jump = userInput.nextInt();
 							System.out.println("What is the Grade of Execution (GOE)?");
 							System.out.println("(-3), (-2), (-1), (0), (+1), (+2), (+3)");
-							Scanner userInput1=new Scanner(System.in);
 							goe = userInput1.nextLine();
-							System.out.println("goe");
-						
 							return jump;
 						}
 					else if(element==2)
@@ -108,6 +105,7 @@ public class Skater
 							spin = userInput.nextInt();
 							System.out.println("What is the Grade of Execution (GOE)?");
 							System.out.println("(-3), (-2), (-1), 0, (+1), (+2), (+3)");
+							goe=userInput1.nextLine();
 							return spin;
 						}
 					else if(element==4)
@@ -116,6 +114,7 @@ public class Skater
 							StepSequence = userInput.nextInt();
 							System.out.println("What is the Grade of Execution (GOE)?");
 							System.out.println("(-3), (-2), (-1), 0, (+1), (+2), (+3)");
+							goe=userInput1.nextLine();
 							return StepSequence;
 						}
 					return element;
