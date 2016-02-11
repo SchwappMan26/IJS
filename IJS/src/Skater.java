@@ -75,7 +75,7 @@ public class Skater
 					System.out.println("Good luck!");
 					System.out.println(" ");
 				}
-			public static int AskForElements()
+			public static void AskForElements()
 				{
 					Scanner userInput1=new Scanner(System.in);
 					System.out.println("What are your elements?");
@@ -86,14 +86,13 @@ public class Skater
 					if (element==1)
 						{
 							System.out.println("(1) Single, (2) Double, (3) Triple, (4) Quad");
-							
 							rotation=userInput.nextInt();
 							System.out.println("(1)Toe Loop, (2)Salchow, (3)Loop, (4)Flip, (5)Lutz, (6)Axel");
 							jump = userInput.nextInt();
 							System.out.println("What is the Grade of Execution (GOE)?");
 							System.out.println("(-3), (-2), (-1), (0), (+1), (+2), (+3)");
 							goe = userInput1.nextLine();
-							return jump;
+							
 						}
 					else if(element==2)
 						{
@@ -106,7 +105,7 @@ public class Skater
 							System.out.println("What is the Grade of Execution (GOE)?");
 							System.out.println("(-3), (-2), (-1), 0, (+1), (+2), (+3)");
 							goe=userInput1.nextLine();
-							return spin;
+							
 						}
 					else if(element==4)
 						{
@@ -115,8 +114,9 @@ public class Skater
 							System.out.println("What is the Grade of Execution (GOE)?");
 							System.out.println("(-3), (-2), (-1), 0, (+1), (+2), (+3)");
 							goe=userInput1.nextLine();
-							return StepSequence;
+							
 						}
-					return element;
+					
+					
 			}
 }

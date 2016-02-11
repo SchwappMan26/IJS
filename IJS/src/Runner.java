@@ -8,8 +8,8 @@ public class Runner
 				Skater.AskSkaterLevel();
 				while (skateContinues) 
 					{
-						System.out.println(" ");
 						Skater.AskForElements();
+						System.out.println(" ");
 						if (Skater.element==1)
 							{
 								Skater.jumps--;
