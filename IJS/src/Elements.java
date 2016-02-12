@@ -995,11 +995,8 @@ public class Elements
 			
 		public static void printList()
 		  	{
-		  		System.out.println(yourRoutine.size());
 		  		for (Elements e : yourRoutine)
 		  			{
-				  		System.out.println("hello");
-
 		  				System.out.println(e.getElement()+"     "+e.getValue());					
 		 			}
 		  	}
@@ -1017,7 +1014,7 @@ public class Elements
 		public static void setSum(double sum)
 			{
 				Elements.sum = sum;
-			}
+			} 
 		public static ArrayList<Elements> getYourRoutine()
 			{
 				return yourRoutine;

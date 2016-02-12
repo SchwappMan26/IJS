@@ -8,6 +8,7 @@ public class Skater
 		static int element;
 		static int rotation; 
 		static int jump;
+		static int combination;
 		static int spin;
 		static int StepSequence;
 		static String goe;
@@ -81,7 +82,7 @@ public class Skater
 					System.out.println("What are your elements?");
 					System.out.println("You are allowed "+jumps+ " jumps, "+spins+" spins, and "+stepSequence+" Step Sequences");
 					System.out.println(" ");
-					System.out.println("(1)Jump, (2)Jump Combination (3)Spin, or (4)step sequence?");
+					System.out.println("(1)Jump, (2)Spin, or (3)step sequence?");
 					element = userInput.nextInt();
 					if (element==1)
 						{
@@ -92,13 +93,8 @@ public class Skater
 							System.out.println("What is the Grade of Execution (GOE)?");
 							System.out.println("(-3), (-2), (-1), (0), (+1), (+2), (+3)");
 							goe = userInput1.nextLine();
-							
 						}
-					else if(element==2)
-						{
-							
-						}
-					else if (element==3)
+					else if (element==2)
 						{
 							System.out.println("(1)Combo Spin, (2)Flying sit, (3)flying camel, (4)Change foot sit, (5)Change foot camel");
 							spin = userInput.nextInt();
@@ -107,7 +103,7 @@ public class Skater
 							goe=userInput1.nextLine();
 							
 						}
-					else if(element==4)
+					else if(element==3)
 						{
 							System.out.println("(1)Step Sequence, (2)choreograph step sequence");
 							StepSequence = userInput.nextInt();
