@@ -2,8 +2,10 @@ import java.util.Scanner;
 public class Skater
 	{
 		static Scanner userInput = new Scanner(System.in);
+		static Scanner userInput1=new Scanner(System.in);
 		static int level;
-		static int numSkaters;
+		static double factor;
+//		static int numSkaters;
 		static String names;
 		static int element;
 		static int rotation; 
@@ -35,6 +37,7 @@ public class Skater
 							jumps=6;
 							spins=2;
 							stepSequence=1;
+							factor=2.0;
 							System.out.println("You are allowed 6 jumps, 2 spins, and 1 step sequence");
 						}
 					else if (level==2)
@@ -43,6 +46,7 @@ public class Skater
 							jumps=7;
 							spins=3;
 							stepSequence=1;
+							factor=2.0;
 							System.out.println("You are allowed 7 jumps, 3 spins, and 1 step sequence");
 						}
 					else if (level==3)
@@ -51,6 +55,7 @@ public class Skater
 							jumps=8;
 							spins=3;
 							stepSequence=1;
+							factor=2.0;
 							System.out.println("You are allowed 8 jumps, 3 spins, and 1 step sequence");
 						}
 					else
@@ -59,14 +64,15 @@ public class Skater
 							jumps=8;
 							spins=3;
 							stepSequence=2;
+							factor=2.0;
 							System.out.println("You are allowed 8 jumps, 3 spins, and 2 Step Sequences");
 						}
 				}
-			public static void AskForHowManySkaters()
-				{
-					System.out.println("How many Skaters are competing?");
-					numSkaters = userInput.nextInt();
-				}
+//			public static void AskForHowManySkaters()
+//				{
+//					System.out.println("How many Skaters are competing?");
+//					numSkaters = userInput.nextInt();
+//				}
 			public static void AskSkaterName()
 				{
 					System.out.println("Dear Skater, what is your name?");
@@ -78,7 +84,7 @@ public class Skater
 				}
 			public static void AskForElements()
 				{
-					Scanner userInput1=new Scanner(System.in);
+					
 					System.out.println("What are your elements?");
 					System.out.println("You are allowed "+jumps+ " jumps, "+spins+" spins, and "+stepSequence+" Step Sequences");
 					System.out.println(" ");
@@ -99,7 +105,7 @@ public class Skater
 							System.out.println("(1)Combo Spin, (2)Flying sit, (3)flying camel, (4)Change foot sit, (5)Change foot camel");
 							spin = userInput.nextInt();
 							System.out.println("What is the Grade of Execution (GOE)?");
-							System.out.println("(-3), (-2), (-1), 0, (+1), (+2), (+3)");
+							System.out.println("(-3), (-2), (-1), (0), (+1), (+2), (+3)");
 							goe=userInput1.nextLine();
 							
 						}
@@ -108,7 +114,7 @@ public class Skater
 							System.out.println("(1)Step Sequence, (2)choreograph step sequence");
 							StepSequence = userInput.nextInt();
 							System.out.println("What is the Grade of Execution (GOE)?");
-							System.out.println("(-3), (-2), (-1), 0, (+1), (+2), (+3)");
+							System.out.println("(-3), (-2), (-1), (0), (+1), (+2), (+3)");
 							goe=userInput1.nextLine();
 							
 						}

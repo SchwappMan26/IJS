@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 public class Elements
 	{
-		static double sum=0;
+		static double Esum=0;
 		static ArrayList<Elements>yourRoutine=new ArrayList<Elements>();
 		private String element;
 		private double value;	
@@ -43,6 +43,11 @@ public class Elements
 								else if(Skater.goe.equals("+3")||Skater.goe.equals(" +3")||Skater.goe.equals("+3 ")||Skater.goe.equals(" +3 "))
 									{
 										yourRoutine.add(new Elements("1Toe Loop", 1.0));
+									}
+								else
+									{
+										System.out.println("Invalid Command please enter a valid GOE");
+										System.exit(0);
 									}
 							}
 						else if(Skater.jump==2)
@@ -997,23 +1002,23 @@ public class Elements
 		  	{
 		  		for (Elements e : yourRoutine)
 		  			{
-		  				System.out.println(e.getElement()+"     "+e.getValue());					
+		  				System.out.println(e.getElement()+"     "+e.getValue());
 		 			}
 		  	}
 		 public static void finalPrintList()
 		  	{				
-		 		for (int i=0; i<Skater.elementNumber;i++)
+		 		for (int i=0; i<yourRoutine.size(); i++)
 		 			{
-		  				sum=sum+yourRoutine.get(i).getValue();
+		  				Esum+=yourRoutine.get(i).getValue();
 		  			}
 		  	}
 		public static double getSum()
 			{
-				return sum;
+				return Esum;
 			}
 		public static void setSum(double sum)
 			{
-				Elements.sum = sum;
+				Elements.Esum = sum;
 			} 
 		public static ArrayList<Elements> getYourRoutine()
 			{
